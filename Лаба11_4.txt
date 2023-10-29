@@ -1,0 +1,15 @@
+n = int(input("Введите число строк: "))
+
+word_count = {}
+
+for _ in range(n):
+    line = input().split()
+    for word in line:
+        word_count[word] = word_count.get(word, 0) + 1
+
+max_count = max(word_count.values())
+
+most_common_words = [word for word, count in word_count.items() if count == max_count]
+most_common_words.sort()
+
+print(most_common_words[0])

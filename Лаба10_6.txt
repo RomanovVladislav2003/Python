@@ -1,0 +1,16 @@
+def count_unique_words():
+    n = int(input())
+    words_set = set()
+
+    for k in range(n):
+        line = input().split()
+        for word in line:
+            words_set.add(word)
+    print(len(words_set))
+count_unique_words()
+
+# 4
+# She sells sea shells on the sea shore;
+# The shells that she sells are sea shells I'm sure.
+# So if she sells sea shells on the sea shore,
+# I'm sure that the shells are sea shore shells.

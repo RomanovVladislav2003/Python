@@ -1,0 +1,11 @@
+def remove(lst, k):
+    for i in range(k, len(lst)-1):
+        lst[i] = lst[i+1]
+    lst.pop()
+lst = []
+for i in range(int(input())):
+    lst.append(int(input()))
+print(lst)
+k = int(input())
+remove(lst, k)
+print(lst)

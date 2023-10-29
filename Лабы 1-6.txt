@@ -1,0 +1,64 @@
+№1)Сумма трёх чисел:
+
+	a = int(input())
+	b = int(input())
+	c = int(input())
+	print(a + b + c)
+
+№2)Шоколадка:
+
+	n = int(input())
+	m = int(input())
+	k = int(input())
+	square = n * m
+	  if k <= square and k % n == 0 or k % m == 0:
+    	      print("YES")
+	  else:
+    	      print("NO")
+
+№3)Конец уроков:
+
+	import math
+	a = int(input("Введите номер урока: "))
+	a = a * 45 + (a // 2) * 5 + ((a+1) // 2 - 1) * 15
+	print(a // 60 + 9, a % 60, sep=':')
+
+№4)Потерянная карточка:
+
+	N = int(input("Введите количество карточек: "))
+	Sum = 0
+	  for i in range(1, N + 1):
+          	Sum += i
+	  for i in range(N - 1):
+          	Sum -= int(input("Введите известные карточки: "))
+	print("Номер потерянной карточки: ", Sum)
+
+№5)Обращение фрагмента:
+
+	string = input("Введите строку: ")
+
+	first_h = string.find('h')
+	last_h = string.rfind('h')
+
+	substring = string[first_h+1: last_h]
+	reversed_substring = substring[::-1]
+
+	result = string[:first_h+1] + reversed_substring + string[last_h:]
+	print("Результат: ", result)
+
+№6)Номер числа Фибоначчи:
+
+	A = int(input("Введите число: "))
+	if A == 0:
+	    print(0)
+	else:
+	    fib_prev, fib_next = 0, 1
+	    n = 1
+	while fib_next <= A:
+	    if fib_next == A:
+	        print(n)
+	        break
+	    fib_prev, fib_next = fib_next, fib_prev + fib_next
+	    n += 1
+	else:
+	    print(-1)
